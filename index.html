@@ -2,78 +2,172 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>浦东新区项目开发</title>
 	<link rel="stylesheet" href="/css/common.css">
-	<link rel="icon" href="/img/logo_favicon.ico">
+	<link rel="icon" href="/img/logoPre.ico">
+	<!-- <link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/css/esri.css"> -->
 	<script src="/js/jquery.min.js"></script>
+	<!-- <script src="/js/init.js"></script> -->
+	<!-- <script src="https://js.arcgis.com/3.20/"></script> -->
+    <!-- <script>
+      var map;
+      require(["esri/map", "dojo/domReady!"], function(Map) {
+        map = new Map("map", {
+          basemap: "topo",  //For full list of pre-defined basemaps, navigate to http://arcg.is/1JVo6Wd
+          center: [-122.45, 37.75], // longitude, latitude
+          zoom: 13
+        });
+      });
+    </script> -->
 </head>
 <body>
 <!-- header -->
 	<div class="top">
 		<div class="topTitle">
 			<div class="logo">
-				<img class="logo-img" src="/img/logo.png" alt="logo">
+				<img class="logo-img" src="/img/logoPre.png" alt="logo">
 				<span class="logo-word">浦东新区项目开发</span>
 			</div>
 			<div class="nav">
 				<ul>
-					<li style="float:left;">首页</li>
-					<li style="float:left;">航线展示</li>
-					<li style="float:left;">海域水域监测</li>
-					<li style="float:left;">海水质量控制</li>
-					<li style="float:left;">海洋灾害预警</li>
+					<li class="navList"><a href="">首页</a></li>
+					<li class="navList"><a href="">航线展示</a></li>
+					<li class="navList"><a href="">海域水域监测</a></li>
+					<li class="navList"><a href="">海水质量控制</a></li>
+					<li class="navList"><a href="">海洋灾害预警</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 <!-- main -->
 	<div class="main">
-		<div class="content-left">
-
-			<div class="content-box">
-				<a href="/demo1" title="图片1">
-					<img src="/img/boxImg1.jpg" alt="" class="content-box item">
-					<div class="content-word">海域水域监测</div>
-				</a>
+		<div class="content">
+			<div class="content-special">
+				<div class="spacial-img">
+					<img src="/img/dataImg1.png" alt="">
+				</div>
+				<div class="spacial-name">专题数据</div>
+				<ul>
+					<li><a href="">海洋灾害预警</a></li>
+					<li><a href="" title="南美洲部分国家进出口商品总值">南美洲部分国家进出口商品总值</a></li>
+					<li><a href="">海洋灾害预警</a></li>
+					<li><a href="">海洋灾害预警</a></li>
+				</ul>
 			</div>
 
-			<div class="content-box">
-				<a href="" title="图片2"><img src="/img/boxImg2.jpg" alt="" class="content-box item">
-					<div class="content-word">海洋灾害预警</div>
-				</a>
+			<div class="content-special">
+				<div class="spacial-img">
+					<img src="/img/dataImg2.png" alt="">
+				</div>
+				<div class="spacial-name">价格监测</div>
+				<ul>
+					<li><a href="">海洋灾害预警</a></li>
+					<li><a href="">南美洲部分国家进出口商品总值</a></li>
+					<li><a href="">海洋灾害预警</a></li>
+					<li><a href="">海洋灾害预警</a></li>
 
+				</ul>
 			</div>
 
-			<div class="content-box">
-				<a href="" title="图片3"><img src="/img/boxImg3.jpg" alt="" class="content-box item">
-				<div class="content-word">海水质量控制</div></a>
+			<div class="content-special">
+				<div class="spacial-img">
+					<img src="/img/dataImg3.png" alt="">
+				</div>
+				<div class="spacial-name">共享数据</div>
+				<ul>
+					<li><a href="">海洋灾害预警</a></li>
+					<li><a href="">南美洲部分国家进出口商品总值</a></li>
+					<li><a href="">海洋灾害预警</a></li>
+					<li><a href="">海洋灾害预警</a></li>
+				</ul>
 			</div>
 
-			<div class="content-box">
-				<a href="" title="图片4">
-					<img src="/img/boxImg4.jpg" alt="" class="content-box item">
-					<div class="content-word">海域水域监测</div></a>
-				</a>
-			</div>
-
-			<div class="content-box">
-				<a href="" title="图片5">
-					<img src="/img/boxImg5.jpg" alt="" class="content-box item">
-					<div class="content-word">海水质量控制</div></a>
-				</a>
-			</div>
-
-			<div class="content-box">
-				<a href="" title="图片6">
-					<img src="/img/boxImg6.jpg" alt="" class="content-box item">
-					<div class="content-word">海洋灾害预警</div></a>
-				</a>
+			<div class="content-special">
+				<div class="spacial-img">
+					<img src="/img/dataImg4.png" alt="">
+				</div>
+				<div class="spacial-name">动态数据</div>
+				<ul>
+					<li><a href="">海洋灾害预警</a></li>
+					<li><a href="">南美洲部分国家进出口商品总值</a></li>
+					<li><a href="">海洋灾害预警</a></li>
+					<li><a href="">海洋灾害预警</a></li>
+				</ul>
 			</div>
 		</div>
+		<div class="content-leftAndRight" style="">
+			<div class="content-left">
+				<div class="content-box">
+					<a href="/demo1" title="图片1">
+						<img src="/img/boxImg1.jpg" alt="" class="content-box item">
+						<div class="content-word">海域水域监测</div>
+					</a>
+				</div>
+
+				<div class="content-box">
+					<a href="" title="图片2"><img src="/img/boxImg2.jpg" alt="" class="content-box item">
+						<div class="content-word">海洋灾害预警</div>
+					</a>
+
+				</div>
+
+				<div class="content-box">
+					<a href="" title="图片3"><img src="/img/boxImg3.jpg" alt="" class="content-box item">
+					<div class="content-word">海水质量控制</div></a>
+				</div>
+
+				<div class="content-box">
+					<a href="" title="图片4">
+						<img src="/img/boxImg4.jpg" alt="" class="content-box item">
+						<div class="content-word">海域水域监测</div></a>
+					</a>
+				</div>
+
+				<div class="content-box">
+					<a href="" title="图片5">
+						<img src="/img/boxImg5.jpg" alt="" class="content-box item">
+						<div class="content-word">海水质量控制</div></a>
+					</a>
+				</div>
+
+				<div class="content-box">
+					<a href="" title="图片6">
+						<img src="/img/boxImg6.jpg" alt="" class="content-box item">
+						<div class="content-word">海洋灾害预警</div></a>
+					</a>
+				</div>
+			</div>
+			<div class="content-right">
+				<img src="/img/map.png" alt="mapPicture">
+			</div>
+		</div>
+		
+			<!-- <div class="content-right">
+				<div id="map"></div>
+			</div> -->
 	</div>
 <!-- footer -->
 	<div class="bottom">
 		<div class="footer" style="color:#fff;display:flex;align-items:center;">版权所有：上海海洋大学</div>
-	</div>	
+	</div>
+	<script>
+		//设置body的高度
+		var mainHeight= document.body.clientHeight -140;
+		$(".main").css("height",mainHeight);
+		//菜单点击后 出现背景颜色 首页默认出现背景颜色
+		$(document).ready(function(){
+			var navList=document.getElementsByClassName("navList");
+			for(let i=0;i<navList.length;i++){
+				navList[i].onclick = function(){
+					this.style.backgroundColor = "red";
+		        	for (var i = 0; i < $(this).siblings().length; i++) {
+		    			$(this).siblings().css("background","");
+		    		}
+				}  
+				
+			}
+		})	
+	</script>	
 </body>
 </html>

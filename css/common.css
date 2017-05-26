@@ -44,43 +44,67 @@ a{
     justify-content: center;
     align-items: center;
 }
-.nav ul li{
+.nav ul li a{
+	color: #fff;
 	float: left;
-	padding-right: 30px;
+	padding:0 15px;
+}
+.nav ul li:hover{
+	transform: scale(1.1);
+	background: gray;
+	border-radius: 5px;
+	cursor: pointer;
+	  
+}
+.navList{
+	float:left;
 }
 /*header css end*/
 
 /*main css*/
 .main{
-	background: floralwhite;
+	background: #eef1f7;
 	margin:0 auto;
 }
+.content{
+	display: flex;
+    justify-content: center;
+}
 .content-left{
-	width: 50%;
+	width: 40%;
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-end;
-	/*换行（作用于容器）*/
 	flex-wrap: wrap;
-	margin-left: 25px;
+	margin-left: 10%;
+}
+.content-right{
+	width: 40%;
+    float: right;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+}
+.content-right img{
+	width: 100%;
 }
 .content-box{
-	width:250px;
+	width:230px;
 	border-radius:5px;
 	background:#fff;
-	margin:30px 0;
-	height: 170px;
+	margin-top: 5%;
+	height: 150px;
 }
 .content-box .item{
-	width:230px;
-	height:150px;
+	width:210px;
+	height:130px;
 	border:1px solid gray;
 	border-radius:5px;
 	margin:10px;
 }
 .content-word{
 	display: flex;
-	width: 230px;
+	width: 210px;
 	justify-content: center;
 	background: chocolate;
 	border-radius:5px;
@@ -90,6 +114,53 @@ a{
 	position: relative;
 	top: -45px;
 	left: 11px;
+}
+.main>.content>ul li a{
+	color: #666666;
+    width: 63%;
+    float: left;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.content-special{
+	width: 20%;
+	border-right: 2px dashed #000000;
+	display: inline;
+	float: left;
+}
+.content-special ul li{
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width:200px;
+}
+.content-special:last-child{
+	border: 0 none;
+}
+.spacial-img{
+	display: flex;
+	justify-content: center;
+}
+.spacial-img img{
+	width: 130px;
+	height: 118px;
+}
+.spacial-name{
+	width: 100%;
+    height: 30px;
+    float: left;
+    display: inline;
+    line-height: 30px;
+    cursor: default;
+    vertical-align: bottom;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    font-weight: bold;
+    text-indent: 25%;
+    padding-left: 40px;
 }
 /*main css end*/
 
@@ -109,3 +180,25 @@ a{
     justify-content: center;
 }
 /*footer css end*/
+/*根据不同的屏幕大小，加载不同的样式*/
+@media screen and (min-width:1500px){
+		.logo-img{
+			left: 10%;
+		}
+		.logo-word{
+			left: 16%;
+		}
+    	.content{
+    		width: 85%;
+			margin:0 auto;
+    	}
+    	.content-leftAndRight{
+    		width: 85%;
+    		margin:0 auto;
+    		display:flex;
+    		justify-content:space-between;
+    	}
+    	.content-right img{
+    		width: 80%;
+    	}
+}
