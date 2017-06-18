@@ -81,12 +81,14 @@ a{
 .content-right{
 	width: 40%;
     float: right;
-    position: absolute;
+    position: relative;
     right: 10%;
-    top: 40%;
+    top: -490px;
 }
 .content-right img{
 	width: 100%;
+	margin-top: -2%;
+    height: 500px;
 }
 .content-box{
 	width:230px;
@@ -180,25 +182,44 @@ a{
     justify-content: center;
 }
 /*footer css end*/
+/*单个subject页面的数据展示*/
+.subContent{
+	left: 3%;
+	top: 13%;
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    
+}
+.jquery-accordion-menu{
+	min-width: 200px;
+    width: 220px;
+}
+/*单个subject页面的数据展示 end*/
 /*根据不同的屏幕大小，加载不同的样式*/
 @media screen and (min-width:1500px){
-		.logo-img{
-			left: 10%;
-		}
-		.logo-word{
-			left: 16%;
-		}
-    	.content{
-    		width: 85%;
-			margin:0 auto;
-    	}
-    	.content-leftAndRight{
-    		width: 85%;
-    		margin:0 auto;
-    		display:flex;
-    		justify-content:space-between;
-    	}
-    	.content-right img{
-    		width: 80%;
-    	}
+	.logo-img{
+		left: 10%;
+	}
+	.logo-word{
+		left: 16%;
+	}
+	.content{
+		width: 85%;
+		margin:0 auto;
+	}
+	.content-leftAndRight{
+		width: 85%;
+		margin:0 auto;
+		display:flex;
+		justify-content:space-between;
+	}
+	.content-right img{
+		width: 80%;
+		margin-top: -30px;
+		height: 503px;
+	}
+	.subContent{
+		left: 15%
+	}
 }
