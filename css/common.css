@@ -12,6 +12,11 @@ a{
 	text-decoration: none;
 }
 /*header css*/
+.top{
+	/*position: fixed;*/
+    width: 100%;
+    /*z-index: 1;*/
+}
 .topTitle{
 	background:#343844;
 	width:100%;
@@ -25,23 +30,21 @@ a{
 .logo-img{
 	width:50px;
 	height:50px;
-	position: fixed;
-    top: 16px;
     left: 4%;
 }
 .logo-word{
-	position: fixed;
-    top: 24px;
+	/*position: fixed;
+    top: 24px;*/
     font-size: 25px;
     left: 10%;
 }
 .nav{
-	width: 50%;
+	width: 100%;
     float: right;
     color: #fff;
     display: flex;
     height: 80px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .nav ul li a{
@@ -49,7 +52,7 @@ a{
 	float: left;
 	padding:0 15px;
 }
-.nav ul li:hover{
+.nav >.navListMenu a:hover{
 	transform: scale(1.1);
 	background: gray;
 	border-radius: 5px;
@@ -170,8 +173,6 @@ a{
 .bottom{
 	height: 60px;
     background: #343844;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 .footer{

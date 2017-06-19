@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="/js/echarts.js"></script>
+	<script src="/js/china.js"></script>
+	<script src="/js/jquery.min.js"></script>
+</head>
+<body>
+	<div id="mapGis" style="height:400px;width:400px;"></div>
+	
+	<script>
+	var chart = echarts.init(document.getElementById('mapGis'));
+	chart.setOption({
+	    series: [{
+	        type: 'map',
+	        map: 'china'
+	    }]
+	});
+	$.get('js/china.json', function (chinaJson) {
+	    echarts.registerMap('china', chinaJson);
+	    var chart = echarts.init(document.getElementById('mapGis'));
+	    chart.setOption({
+	        series: [{
+	            type: 'map',
+	            map: 'china'
+	        }]
+	    });
+	});
+	</script>
+</body>
+</html>
