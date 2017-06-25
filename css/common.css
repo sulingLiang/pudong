@@ -188,6 +188,23 @@ a{
 }
 /*main css end*/
 
+/*main subContent css*/
+.chart-tag1{
+	background: url(../img/table.png) no-repeat left center;
+    display: inline-block;
+    padding-left: 20px;
+    cursor: pointer;
+    height: 17px;
+}
+.chart-tag2{
+	background: url(../img/line.png) no-repeat left center;
+    display: inline-block;
+    padding-left: 20px;
+    cursor: pointer;
+    height: 17px;
+}
+/*main subContent css end*/
+
 /*footer css*/
 .bottom{
 	position: absolute;
