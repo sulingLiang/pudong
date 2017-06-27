@@ -66,7 +66,7 @@ a{
 	float: left;
 	padding:0 15px;
 }
-.nav >.navListMenu a:hover{
+.navListMenu a:hover{
 	transform: scale(1.1);
 	background: gray;
 	border-radius: 5px;
@@ -189,19 +189,30 @@ a{
 /*main css end*/
 
 /*main subContent css*/
-.chart-tag1{
-	background: url(../img/table.png) no-repeat left center;
+.charts-class{
+	line-height: 19px;
+    padding: 3px 10px 8px 10px;
     display: inline-block;
     padding-left: 20px;
     cursor: pointer;
-    height: 17px;
+    height: 26px;
+    border: 1px solid;
+    width: auto;
+}
+.chart-tag1{
+    background: url(../img/table.png) no-repeat left center;
 }
 .chart-tag2{
 	background: url(../img/line.png) no-repeat left center;
-    display: inline-block;
-    padding-left: 20px;
-    cursor: pointer;
-    height: 17px;
+}
+.chart-tag3{
+	background: url(../img/column.png) no-repeat left center;
+}
+.chart-tag4{
+	background: url(../img/scatter.png) no-repeat left center;
+}
+.chart-tag5{
+	background: url(../img/map.png) no-repeat left center;
 }
 /*main subContent css end*/
 
@@ -233,6 +244,7 @@ a{
     
 }
 .jquery-accordion-menu{
+	left: 13%;
 	min-width: 200px;
     width: 220px;
 }
