@@ -214,6 +214,9 @@ a{
 .chart-tag5{
 	background: url(../img/map.png) no-repeat left center;
 }
+.chartTableCss{
+	width: 80px;
+}
 /*main subContent css end*/
 
 /*footer css*/

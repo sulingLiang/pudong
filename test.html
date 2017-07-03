@@ -8,22 +8,30 @@
 </head>
 <body>
 	<div >
-		<ul id="demo" style="position: relative;left: 20%;top: 80px;float: left;width: 600px;height:400px;">
-			<li id="li-1" class="searchterm">li1</li>
-			<li id="li-2" class="searchterm">li2</li>
-			<li id="li-3" class="searchterm">li3</li>
-			<li id="li-4" class="searchterm">li4</li>
-			<li id="li-5" class="searchterm">li5</li>
+		<ul id="demo">
+			<li id="li-1">li1</li>
+			<li id="li-2">li2</li>
+			<li id="li-3">li3</li>
+			<li id="li-4">li4</li>
+			<li id="li-5">li5</li>
 		</ul>
 	</div>
-	<div id="echartDemo" style="position: relative;left: 20%;top: 80px;float: left;width: 600px;height:400px;"></div>
 	<script>
-		function getEventTarget(e) {
+		/*document.getElementById("demo").addEventListener("click",function(e){
+			console.log(e.target.id);
+		})*/
+		/*function getEventTarget(e) {
 		    e = e || window.event;
 		    return e.target || e.srcElement; 
-		}
-		var ul = document.getElementById('demo');
-		ul.onclick = function(event) {
+		}*/
+		$('#demo').click(function(e){
+			console.log(e.target.id);
+		});
+		/*ul.onclick = function(e) {
+		    console.log(e.target.id);
+		    
+		};*/
+		/*ul.onclick = function(event) {
 		    var target = getEventTarget(event);
 		    switch(target.id){
 		    	case 'li-1':
@@ -33,52 +41,7 @@
 		    		chartShow('pie');
 		    		break;
 		    }
-		};
-		function chartShow(type){
-			// 基于准备好的dom，初始化echarts实例
-		    var myChart = echarts.init(document.getElementById('echartDemo'));
-
-		    // 指定图表的配置项和数据
-		    var option = {
-			    color: ['#3398DB'],
-			    tooltip : {
-			        trigger: 'axis',
-			        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-			            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-			        }
-			    },
-			    grid: {
-			        left: '3%',
-			        right: '4%',
-			        bottom: '3%',
-			        containLabel: true
-			    },
-			    xAxis : [
-			        {
-			            type : 'category',
-			            data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-			            axisTick: {
-			                alignWithLabel: true
-			            }
-			        }
-			    ],
-			    yAxis : [
-			        {
-			            type : 'value'
-			        }
-			    ],
-			    series : [
-			        {
-			            name:'直接访问',
-			            type:type,
-			            barWidth: '60%',
-			            data:[10, 52, 200, 334, 390, 330, 220]
-			        }
-			    ]
-			};
-			// 使用刚指定的配置项和数据显示图表。
-			myChart.setOption(option);  
-		}
+		};*/
 		
 	</script>
 </body>

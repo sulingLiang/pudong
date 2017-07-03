@@ -11,6 +11,9 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/kendo.common.min.css">
+<link rel="stylesheet" href="css/kendo.default.min.css">
+<link rel="stylesheet" href="css/kendo.mobile.all.min.css">
 <link rel="stylesheet" href="css/common.css">
 <script src="js/bootstrap.min.js"></script>
 <script src="js/echarts.js"></script>
@@ -94,7 +97,7 @@
 	</div>
 	<div id="chartsId" style="position:absolute;right:-30%;">
 		<ul id="chartsList">
-			<li class="charts-class chart-tag1" id="chartTable"><span>表格</span></li>
+			<li class="charts-class chart-tag1" id="chartTable">表格</li>
 			<li class="charts-class chart-tag2" id="chartLine">线图</li>
 			<li class="charts-class chart-tag3" id="chartBar">柱图</li>
 			<li class="charts-class chart-tag4" id="chartScatter">点图</li>
@@ -105,9 +108,11 @@
 </div>
 <!-- footer -->
 <div class="bottom"></div>
-
+<script src="js/kendo.all.min.js" type="text/javascript"></script>
+<script src="js/kendo.angular.min.js" type="text/javascript"></script>
 <script>
 	$(function(){
+		chartShowTable();
 		//首页
 		$(".product_sort .bd .item").hover(function(){
 			$(this).addClass("layer");
@@ -115,14 +120,12 @@
 			$(this).removeClass("layer");
 		});
 	})
-	function getEventTarget(e) {
-	    e = e || window.event;
-	    return e.target || e.srcElement; 
-	}
-	var chartsUl = document.getElementById('chartsList');
-	chartsUl.onclick = function(event) {
-	    var target = getEventTarget(event);
-	    switch(target.id){
+	//获得当前点击chart类型的id
+	$('#chartsList').click(function(e){
+    	switch(e.target.id){
+	    	case 'chartTable':
+	    		chartShowTable();
+	    		break;
 	    	case 'chartLine':
 	    		chartShow('line');
 	    		break;
@@ -136,11 +139,10 @@
 	    		chartShow('pie');
 	    		break;
 	    }
-	};
+	});
 	function chartShow(type){
 			// 基于准备好的dom，初始化echarts实例
 		    var myChart = echarts.init(document.getElementById('echartDemo'));
-
 		    // 指定图表的配置项和数据
 		    var option = {
 			    color: ['#3398DB'],
@@ -189,7 +191,25 @@
 			};
 			// 使用刚指定的配置项和数据显示图表。
 			myChart.setOption(option);  
-		} 
+	}
+	function chartShowTable(){
+		$("#echartDemo").kendoGrid({
+            selectable: "multiple cell",
+		    allowCopy: {
+		        delimeter: ",",
+		    },
+		    columns: [
+		        { field: "productName" },
+		        { field: "category" }
+		    ],
+		    dataSource: [
+		        { productName: "Tea", category: "Beverages" },
+		        { productName: "Coffee", category: "Beverages" },
+		        { productName: "Ham", category: "Food" },
+		        { productName: "Bread", category: "Food" }
+		    ]
+		});
+	} 
     
 </script>
 <script type="text/javascript">
